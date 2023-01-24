@@ -2,7 +2,7 @@
 
 function bowling_game() {
   return {
-    
+    game: ()=>{}
   };
 }
 
