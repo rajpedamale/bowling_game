@@ -1,7 +1,9 @@
 'use strict';
 
-function game() {
-  return 42;
+function bowling_game() {
+  return {
+    
+  };
 }
 
-module.exports = game;
+module.exports = bowling_game;

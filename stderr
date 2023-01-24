@@ -1,9 +1,33 @@
-PASS ./bowling_game.test.js
-  Test setup
-    ✓ Should confirm running env (2 ms)
+FAIL ./bowling_game.test.js
+  Bowling Game
+    ✕ Should create game (2 ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       1 passed, 1 total
+  ● Bowling Game › Should create game
+
+    TypeError: expect(...).objectContaining is not a function
+
+       5 | describe('Bowling Game', () => {
+       6 |   it('Should create game', () => {
+    >  7 |     expect(bowling_game()).objectContaining({
+         |                            ^
+       8 |       game: expect.any(Function)
+       9 |     });
+      10 |   });
+
+      at Object.<anonymous> (bowling_game.test.js:7:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        1.312 s
+Time:        1.343 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --coverage`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-01-24T12_04_07_636Z-debug.log

@@ -1,9 +1,11 @@
 'use strict';
 
-const game = require('./bowling_game');
+const bowling_game = require('./bowling_game');
 
-describe('Test setup', () => {
-  it('Should confirm running env', () => {
-    expect(game()).toEqual(42);
+describe('Bowling Game', () => {
+  it('Should create game', () => {
+    expect(bowling_game()).objectContaining({
+      game: expect.any(Function)
+    });
   });
 });
