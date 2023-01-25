@@ -27,16 +27,12 @@ describe('Bowling Game', () => {
   });
   
   it('Should score 0 for a gutter game', () => {
-    const n = 20;
-    const pins = 0;
-    rollMany(game, n, pins);
+    rollMany(game, 20, 0);
     expect(game.score()).toEqual(0);
   });
   
   it('Should score 20 for all 1s', () => {
-    const n = 20;
-    const pins = 1;
-    rollMany(game, n, pins);
+    rollMany(game, 20, 1);
     expect(game.score()).toEqual(20);
   });
 });
