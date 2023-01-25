@@ -13,7 +13,7 @@ const rollMany = (test_game, n, pins) => {
 describe('Bowling Game', () => {
   beforeEach(() => {
     game = bowling_game();
-  })
+  });
   
   it('Should create game', () => {
     expect(game).toMatchObject({
