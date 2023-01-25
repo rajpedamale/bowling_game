@@ -17,7 +17,6 @@ const rollSpare = (test_game) => {
 
 const rollStrike = (test_game) => {
   test_game.roll(10);
-  test_game.roll(5);
 };
 
 describe('Bowling Game', () => {
