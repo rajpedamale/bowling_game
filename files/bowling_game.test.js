@@ -13,4 +13,11 @@ describe('Bowling Game', () => {
   it('Should be able to roll', () => {
     expect(bowling_game.roll(0)).toEqual(0);
   });
+  
+  it('Should score 0 for a gutter game', () => {
+    for (let i=0; i<20; i++){
+      bowling_game.roll(0);
+    }
+    expect(bowling_game.score()).toEqual(0);
+  });
 });
