@@ -18,7 +18,7 @@ function bowling_game() {
       } else {
         game_score += rolls[first_in_frame] + rolls[first_in_frame + 1];
       }
-      first_in_frame += 2
+      first_in_frame += 2;
     }
     return game_score;
   };
