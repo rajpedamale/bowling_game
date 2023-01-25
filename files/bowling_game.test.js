@@ -10,6 +10,11 @@ const rollMany = (test_game, n, pins) => {
   }
 };
 
+const rollSpare = (test_game) => {
+  test_game.roll(5);
+  test_game.roll(5);
+};
+
 describe('Bowling Game', () => {
   beforeEach(() => {
     game = bowling_game();
@@ -33,8 +38,7 @@ describe('Bowling Game', () => {
   });
   
   it('Should score 16 for 1 spare', () => {
-    game.roll(5);
-    game.roll(5);
+    rollSpare(game);
     game.roll(3);
     rollMany(game, 17, 0);
     expect(game.score()).toEqual(16);

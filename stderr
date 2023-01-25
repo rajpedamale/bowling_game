@@ -1,12 +1,12 @@
 PASS ./bowling_game.test.js
   Bowling Game
     ✓ Should create game (3 ms)
-    ✓ Should score 0 for a gutter game (1 ms)
+    ✓ Should score 0 for a gutter game
     ✓ Should score 20 for all 1s
     ✓ Should score 16 for 1 spare
 
 Test Suites: 1 passed, 1 total
 Tests:       4 passed, 4 total
 Snapshots:   0 total
-Time:        1.464 s
+Time:        1.488 s
 Ran all test suites.
