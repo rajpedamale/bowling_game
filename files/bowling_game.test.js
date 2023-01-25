@@ -20,4 +20,11 @@ describe('Bowling Game', () => {
     }
     expect(bowling_game.score()).toEqual(0);
   });
+  
+  it('Should score 20 for all 1s'), () => {
+    for (let i=0; i<20; i++){
+      bowling_game.roll(1);
+    }
+    expect(bowling_game.score()).toEqual(20);
+  });
 });
