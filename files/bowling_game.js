@@ -12,7 +12,7 @@ function bowling_game() {
   };
   
   const score = () => {
-    return rolls.reduce((acc, value) => acc + value, 0)
+    return rolls.reduce((acc, value) => acc + value, 0);
   };
   
   return {
