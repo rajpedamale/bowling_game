@@ -10,7 +10,7 @@ function bowling_game() {
   };
   
   const isSpare = (first_in_frame) => {
-    return rolls[first_in_frame] + rolls[first_in_frame+1] === 10
+    return rolls[first_in_frame] + rolls[first_in_frame+1] === 10;
   };
   
   const score = () => {
