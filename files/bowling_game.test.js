@@ -56,5 +56,10 @@ describe('Bowling Game', () => {
     expect(game.score()).toEqual(24);
   });
   
+  it('Should score 300 for the perfect game', () => {
+    rollMany(game, 12, 10);
+    expect(game.score()).toEqual(300);
+  });
+  
 
 });
