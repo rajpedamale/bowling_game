@@ -2,7 +2,8 @@
 
 function bowling_game() {
   return {
-    game: ()=>{}
+    roll: ()=>{},
+    score: ()=>{}
   };
 }
 
