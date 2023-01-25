@@ -11,14 +11,14 @@ function bowling_game() {
   
   const score = () => {
     let game_score = 0;
-    let i = 0;
+    let first_in_frame = 0;
     for (let frame=0; frame<10; frame++) {
-      if (rolls[i] + rolls[i+1] === 10) {
-        game_score += 10 + rolls[i+2];
-        i += 2;
+      if (rolls[first_in_frame] + rolls[first_in_frame+1] === 10) {
+        game_score += 10 + rolls[first_in_frame+2];
       } else {
-        game_score += rolls[i++] + rolls[i++];
+        game_score += rolls[first_in_frame] + rolls[first_in_frame + 1];
       }
+      first_in_frame += 2
     }
     return game_score;
   };
