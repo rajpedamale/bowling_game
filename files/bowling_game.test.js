@@ -9,4 +9,8 @@ describe('Bowling Game', () => {
       score: expect.any(Function)
     });
   });
+  
+  it('Should be able to roll', () => {
+    expect(bowling_game.roll(0)).toEqual(0);
+  });
 });
