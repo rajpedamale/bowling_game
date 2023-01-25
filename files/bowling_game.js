@@ -1,8 +1,11 @@
 'use strict';
 
 function bowling_game() {
+  const roll = pins => {
+    return pins;
+  };
   return {
-    roll: ()=>{},
+    roll,
     score: ()=>{}
   };
 }
