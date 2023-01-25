@@ -1,7 +1,6 @@
 'use strict';
 
 function bowling_game() {
-  let game_score = 0;
   const rolls = [];
   let current_roll = 0;
   
@@ -12,7 +11,12 @@ function bowling_game() {
   };
   
   const score = () => {
-    return rolls.reduce((acc, value) => acc + value, 0);
+    let game_score = 0;
+    let i = 0;
+    for (let frame=0; frame<10; frame++) {
+      games_score += rolls[i++] + rolls[i++];
+    }
+    return game_score;
   };
   
   return {
