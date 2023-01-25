@@ -14,7 +14,7 @@ function bowling_game() {
     let game_score = 0;
     let i = 0;
     for (let frame=0; frame<10; frame++) {
-      games_score += rolls[i++] + rolls[i++];
+      game_score += rolls[i++] + rolls[i++];
     }
     return game_score;
   };
