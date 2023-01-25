@@ -11,10 +11,18 @@ function bowling_game() {
   
   const isStrike = (first_in_frame) => {
     return rolls[first_in_frame] === 10;
-  }
+  };
   
   const isSpare = (first_in_frame) => {
     return rolls[first_in_frame] + rolls[first_in_frame+1] === 10;
+  };
+  
+  const nextTwoBallsForStrike = (first_in_frame) => {
+    return rolls[first_in_frame + 1] + rolls[first_in_frame + 2];
+  };
+  
+  const nextBallForSpare = (first_in_frame) => {
+    return rolls[first_in_frame+2];
   };
   
   const score = () => {
@@ -22,10 +30,10 @@ function bowling_game() {
     let first_in_frame = 0;
     for (let frame=0; frame<10; frame++) {
       if (isStrike(first_in_frame)) {
-        game_score += 10 + rolls[first_in_frame + 1] + rolls[first_in_frame + 2];
+        game_score += 10 + nextTwoBallsForStrike(first_in_frame);
         first_in_frame++;
       } else if (isSpare(first_in_frame)) {
-        game_score += 10 + rolls[first_in_frame+2];
+        game_score += 10 + nextBallForSpare(first_in_frame);
         first_in_frame += 2;
       } else {
         game_score += rolls[first_in_frame] + rolls[first_in_frame + 1];
