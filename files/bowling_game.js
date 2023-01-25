@@ -4,9 +4,14 @@ function bowling_game() {
   const roll = pins => {
     return pins;
   };
+  
+  const score = () => {
+    return 0;
+  };
+  
   return {
     roll,
-    score: ()=>{}
+    score
   };
 }
 
