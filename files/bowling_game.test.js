@@ -15,6 +15,11 @@ const rollSpare = (test_game) => {
   test_game.roll(5);
 };
 
+const rollStrike = (test_game) => {
+  test_game.roll(10);
+  test_game.roll(5);
+};
+
 describe('Bowling Game', () => {
   beforeEach(() => {
     game = bowling_game();
@@ -45,7 +50,7 @@ describe('Bowling Game', () => {
   });
   
   it('Should score 24 for all one strike', () => {
-    game.roll(10);
+    rollStrike(game);
     game.roll(4);
     game.roll(3);
     rollMany(game, 16, 0);
