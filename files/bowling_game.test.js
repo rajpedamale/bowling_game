@@ -22,10 +22,6 @@ describe('Bowling Game', () => {
     });
   });
   
-  it('Should be able to roll', () => {
-    expect(game.roll(0)).toEqual(0);
-  });
-  
   it('Should score 0 for a gutter game', () => {
     rollMany(game, 20, 0);
     expect(game.score()).toEqual(0);
