@@ -9,11 +9,15 @@ function bowling_game() {
     return pins;
   };
   
+  const isSpare = (first_in_frame) => {
+    return rolls[first_in_frame] + rolls[first_in_frame+1] === 10
+  };
+  
   const score = () => {
     let game_score = 0;
     let first_in_frame = 0;
     for (let frame=0; frame<10; frame++) {
-      if (rolls[first_in_frame] + rolls[first_in_frame+1] === 10) {
+      if (isSpare(first_in_frame)) {
         game_score += 10 + rolls[first_in_frame+2];
       } else {
         game_score += rolls[first_in_frame] + rolls[first_in_frame + 1];
