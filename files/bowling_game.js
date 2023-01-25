@@ -25,6 +25,10 @@ function bowling_game() {
     return rolls[first_in_frame+2];
   };
   
+  const twoBallsInFrame = (first_in_frame) => {
+    return rolls[first_in_frame] + rolls[first_in_frame + 1];
+  };
+  
   const score = () => {
     let game_score = 0;
     let first_in_frame = 0;
@@ -36,7 +40,7 @@ function bowling_game() {
         game_score += 10 + nextBallForSpare(first_in_frame);
         first_in_frame += 2;
       } else {
-        game_score += rolls[first_in_frame] + rolls[first_in_frame + 1];
+        game_score += twoBallsInFrame(first_in_frame);
         first_in_frame += 2;
       }
     }
