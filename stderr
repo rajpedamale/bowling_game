@@ -1,39 +1,12 @@
-FAIL ./bowling_game.test.js
+PASS ./bowling_game.test.js
   Bowling Game
     ✓ Should create game (3 ms)
     ✓ Should score 0 for a gutter game (1 ms)
     ✓ Should score 20 for all 1s
-    ✕ Should score 16 for 1 spare (3 ms)
+    ✓ Should score 16 for 1 spare (1 ms)
 
-  ● Bowling Game › Should score 16 for 1 spare
-
-    expect(received).toEqual(expected) // deep equality
-
-    Expected: 16
-    Received: 130
-
-      38 |     game.roll(3);
-      39 |     rollMany(game, 17, 0);
-    > 40 |     expect(game.score()).toEqual(16);
-         |                          ^
-      41 |   });
-      42 | });
-      43 | 
-
-      at Object.<anonymous> (bowling_game.test.js:40:26)
-
-Test Suites: 1 failed, 1 total
-Tests:       1 failed, 3 passed, 4 total
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
 Snapshots:   0 total
-Time:        1.5 s
+Time:        1.423 s
 Ran all test suites.
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! @ test: `jest --coverage`
-npm ERR! Exit status 1
-npm ERR! 
-npm ERR! Failed at the @ test script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-01-25T06_57_46_671Z-debug.log

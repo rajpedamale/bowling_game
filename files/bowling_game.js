@@ -15,6 +15,7 @@ function bowling_game() {
     for (let frame=0; frame<10; frame++) {
       if (rolls[i] + rolls[i+1] === 10) {
         game_score += 10 + rolls[i+2];
+        i += 2;
       } else {
         game_score += rolls[i++] + rolls[i++];
       }
