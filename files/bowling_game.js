@@ -5,8 +5,7 @@ function bowling_game() {
   let current_roll = 0;
   
   const roll = pins => {
-    rolls.push(pins);
-    current_roll++;
+    rolls[current_roll++] = pins;
     return pins;
   };
   
