@@ -32,7 +32,7 @@ describe('Bowling Game', () => {
     expect(game.score()).toEqual(0);
   });
   
-  it('Should score 20 for all 1s', () => {
+  it('Should score 20 for all ones', () => {
     rollMany(game, 20, 1);
     expect(game.score()).toEqual(20);
   });
@@ -43,4 +43,14 @@ describe('Bowling Game', () => {
     rollMany(game, 17, 0);
     expect(game.score()).toEqual(16);
   });
+  
+  it('Should score 24 for all one strike', () => {
+    game.roll(10);
+    game.roll(4);
+    game.roll(3);
+    rollMany(game, 16, 0);
+    expect(game.score()).toEqual(24);
+  });
+  
+
 });
