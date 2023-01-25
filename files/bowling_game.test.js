@@ -31,4 +31,12 @@ describe('Bowling Game', () => {
     rollMany(game, 20, 1);
     expect(game.score()).toEqual(20);
   });
+  
+  it('Should score 16 for 1 spare', () => {
+    game.roll(5);
+    game.roll(5);
+    game.roll(3);
+    rollMany(game, 17, 0);
+    expect(game.score()).toEqual(16);
+  });
 });
