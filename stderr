@@ -1,6 +1,16 @@
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ lint: `eslint --config ${CYBER_DOJO_SANDBOX}/.eslintrc.json /**/*.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ lint script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-01-25T06_45_14_078Z-debug.log
 PASS ./bowling_game.test.js
   Bowling Game
-    ✓ Should create game (3 ms)
+    ✓ Should create game (2 ms)
     ✓ Should score 0 for a gutter game (1 ms)
     ✓ Should score 20 for all 1s
     ○ skipped Should score 16 for 1 spare
@@ -8,5 +18,5 @@ PASS ./bowling_game.test.js
 Test Suites: 1 passed, 1 total
 Tests:       1 skipped, 3 passed, 4 total
 Snapshots:   0 total
-Time:        1.469 s
+Time:        1.39 s
 Ran all test suites.
